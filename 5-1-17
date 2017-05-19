@@ -1,0 +1,15 @@
+# We began work on our VPN project. After spending time researching different options, we chose PiVPN which is essentially
+# OpenVPN formatted for a RaspberryPi
+# first we did 
+
+sudo apt-get update
+sudo apt-get upgrade
+
+#then we installed with 
+
+curl -L https://install.pivpn.io | bash
+
+#after installation we went through the configuration menu changing settings relating to ip address, ports, and encryption strenght.
+#during configuration the system froze and I had to manually reboot by unpluging the pi
+#after reboot I could no longer connect the pi to the Bates wifi.
+
