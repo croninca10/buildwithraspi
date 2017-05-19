@@ -1,0 +1,32 @@
+#Continued to have issues with reconnecting the wifi from the crash so I wiped my SD card and re-installed Raspbian OS
+#After flashing I was able to connect to wifi
+#I was still unable to ssh into my pi and I had the following error
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:mgZodUZiP1x8v4Q2sPdjBEv+Wh0GIMwZ+/gnCNz1rmQ.
+Please contact your system administrator.
+Add correct host key in /Users/croninca/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /Users/croninca/.ssh/known_hosts:2
+ECDSA host key for 134.181.105.12 has changed and you have requested strict checking.
+Host key verification failed.
+
+#using emacs I was able to erase host keys and eventually ssh into my pi
+
+bobcat-127-126:~ croninca$ emacs /Users/croninca/.ssh/known_hosts
+
+# Because I was starting on a fresh system I had to redo emailing ip address process.
+# I then re-installed PiVPN
+
+curl -L https://install.pivpn.io | bash
+
+#We elected for our VPN to have 2048-bit encryption which took the remained of the class time to install
+
+Note: using Easy-RSA configuration from: ./vars
+Generating DH parameters, 2048 bit long safe prime, generator 2
+This is going to take a long time
