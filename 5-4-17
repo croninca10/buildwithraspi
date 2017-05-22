@@ -1,2 +1,4 @@
 #most of class was spent doing presentations
-#continued to try to 
+#we decided that we were going to make our own access point/router using one of our pi's and use the other as the VPN server.
+#this didn't work for the same reason's that the VPN setup didn't work.
+#all of the VPN tutorials we found online focused on having the VPN sever connect to one's home network so we tried to find a way to have the vpn just encrypt data wherever it was but this now does not seem possible.
